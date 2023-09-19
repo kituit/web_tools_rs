@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Board{% endblock title %}
+{% block content %}
+<div hx-target="this" hx-swap="outerHTML">
+    <h1>Writing board</h1>
+    <div style="white-space: pre-wrap;">{{ text }}</div>
+    <button hx-get="/board/edit" class="btn">
+        Edit
+    </button>
+    <button hx-delete="/board/delete" class="btn">
+        Delete
+    </button>
+</div>
+{% endblock content %}

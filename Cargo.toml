@@ -5,8 +5,13 @@ edition = "2021"
 
 [dependencies]
 axum = "0.6.18"
+nanoid = "0.4.0"
+serde = { version = "1.0.188", features = ["derive"] }
+shuttle-aws-rds = { version = "0.26.0", features = ["postgres"] }
 shuttle-axum = "0.26.0"
 shuttle-runtime = "0.26.0"
 shuttle-static-folder = "0.26.0"
+sqlx = {version = "0.7.1", features = ["runtime-tokio", "sqlx-postgres"]}
 tera = "1.19.1"
 tokio = "1.28.2"
+tower-http = {version = "0.4.4", features = ["fs"]}
